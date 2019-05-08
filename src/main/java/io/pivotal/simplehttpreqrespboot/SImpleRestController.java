@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SImpleRestController {
 
     @GetMapping("/")
-    public ResponseEntity<String> defaultEndpoint(@RequestHeader(value = "vcap_request_id", required = false) String req_id) {
+    public ResponseEntity<String> defaultEndpoint(@RequestHeader(value = "X-Vcap-Request-Id", required = false) String req_id) {
 
         long t1 = System.nanoTime();
 
